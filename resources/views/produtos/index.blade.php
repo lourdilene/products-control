@@ -22,7 +22,7 @@
         <tr>
             <th>Nº</th>
             <th>Nome</th>
-            <th width="280px">Ação</th>
+            <th width="300px">Ação</th>
         </tr>
         @foreach ($data as $key => $value)
         <tr>
@@ -30,11 +30,11 @@
             <td>{{ $value->nome }}</td>  
             <td>
                 <form action="{{ route('produtos.destroy',$value->id) }}" method="POST">   
-                    <a class="btn btn-info" href="{{ route('produtos.show',$value->id) }}">Show</a>    
-                    <a class="btn btn-primary" href="{{ route('produtos.edit',$value->id) }}">Edit</a>   
+                    <a class="btn btn-info" href="{{ route('produtos.show',$value->id) }}">Visualizar</a>    
+                    <a class="btn btn-primary" href="{{ route('produtos.edit',$value->id) }}">Editar</a>   
                     @csrf
                     @method('DELETE')      
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Excluir</button>
                 </form>
             </td>
         </tr>
