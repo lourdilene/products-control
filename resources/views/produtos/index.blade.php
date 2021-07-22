@@ -26,7 +26,7 @@
         </tr>
         @foreach ($data as $key => $value)
         <tr>
-            <td>{{ $value->id }}</td>
+            <td>{{ ++$i }}</td>            
             <td>{{ $value->nome }}</td>  
             <td>
                 <form action="{{ route('produtos.destroy',$value->id) }}" method="POST">   
